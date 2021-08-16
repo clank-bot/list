@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>java</title>
+    <style>
+#sub
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#sort
+{
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+input
+{
+    margin: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <center>
+        <h3 style="margin: top 20px; margin: bottom 20px;">List of people</h3>
+        <div>
+            <span>1</span>
+            <input type="text" placeholder="Name of the person" id="stu_1">
+            <br>
+
+            <span>2</span>
+            <input type="text" placeholder="Name of the person" id="stu_2">
+            <br>
+
+            <span>3</span>
+            <input type="text" placeholder="Name of the person" id="stu_3">
+            <br>
+
+            <span>4</span>
+            <input type="text" placeholder="Name of the person" id="stu_4">
+            <br>
+        </div>
+        <button onclick="submit()" id="sub">submit</button>
+        <div id="dis" style="font-weight: bold;">
+        
+        </div>
+        <button onclick="sorting()" id="sort">sort</button>
+    </center>
+    <script>
+        name_of_array = [];
+
+        function submit()
+        {
+            var name_1 = document.getElementById("stu_1").value;
+            var name_2 = document.getElementById("stu_2").value;
+            var name_3 = document.getElementById("stu_3").value;
+            var name_4 = document.getElementById("stu_4").value;
+
+            name_of_array.push(name_1);
+            name_of_array.push(name_2);
+            name_of_array.push(name_3);
+            name_of_array.push(name_4);
+
+            console.log(name_of_array);
+
+            document.getElementById("dis").innerHTML=name_of_array;
+            document.getElementById("sub").style.display="none";
+            document.getElementById("sort").style.display="inline-block";
+        }
+
+        function sorting()
+        {
+            name_of_array.sort();
+            console.log(name_of_array);
+            document.getElementById("dis").innerHTML= name_of_array;
+        }
+    </script>
+<!-- <center>
+    <h1>Project on Console</h1>
+    <p>
+        about visual studio and how to set it up
+    </p>
+    <p>
+        how to print anything on console and some other things
+    </p>
+</center>
+
+ <script> 
+console.log("Welcome to the console");
+var first="Aryan ";
+console.log(first);
+var last="Alase";
+console.log(last);
+var a="10";
+console.log(a);
+var b="5";
+console.log(b);
+var root=Math.sqrt(12);
+console.log(root);
+// var add=Math.add(10, 5);
+// console.log(add);
+// var sub=Math.sub(20, 17);
+// console.log(sub);
+// doesnt work :(
+</script>  -->
+</body>
+
+</html>
